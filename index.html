@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Rating</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(28, 28, 28);
+      }
+      .container {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        background-color: rgb(28, 28, 28);
+        height: 50vh;
+        width: 50vw;
+        box-shadow: 1px 1px 10px 1px rgb(10, 10, 10);
+        @media (max-width: 900px) {
+          width: 80vw;
+        }
+      }
+      .btn {
+        box-shadow: 1px 1px 20px 1px rgb(10, 10, 10);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        background-color: rgb(113, 113, 113);
+        border: none;
+      }
+      .rating {
+        color: rgb(113, 113, 113);
+        font-size: 2rem;
+      }
+      .greater-than {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn dec">-</button>
+      <div class="rating__container">
+        <span class="rating" data-rate="1">&#9734;</span>
+        <span class="rating" data-rate="2">&#9734;</span>
+        <span class="rating" data-rate="3">&#9734;</span>
+        <span class="rating" data-rate="4">&#9734;</span>
+        <span class="rating" data-rate="5">&#9734;</span>
+      </div>
+      <button class="btn inc">+</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
